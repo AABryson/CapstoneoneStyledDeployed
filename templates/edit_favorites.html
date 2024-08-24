@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel='stylesheet' href="{{ url_for('static', filename='edit_favorites.css') }}">
+<link rel='stylesheet' href="{{ url_for('static', filename='drink_search.css') }}">
+
+{% endblock %}
+
+{% block title %}
+    <div class="mainTitle">Edit Your Favorites</div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="actualFavorites">
+        <!-- <div class='favoritesColumn'> -->
+            {% for f in favorites %}
+            <div class="EditFavoritesRow">
+                <a href="/delete_favorite/{{ f.id }}?userid={{userid}}">
+                    <button class="userbutton-8">Delete
+                    </button>
+                </a>
+                <h3 id="editDrinkName">{{ f.drinkname }}</h3>
+            </div>
+            {% endfor %}
+        <!-- </div> -->
+    </div>
+{% endblock %}

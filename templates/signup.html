@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block extra_css %}
+<link rel='stylesheet' href="{{ url_for('static', filename='signup.css') }}">
+{% endblock %}
+
+
+{% block title %}
+<div class="signupPage">Signup</div>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="signupContainer">
+   
+    <form class='signupForm' method="POST" action="/store_user">
+    {{ form.hidden_tag() }}
+
+    {% for field in form if field.widget.input_type != 'hidden' %}
+        {{field.label}}
+        {{ field(class="signupInput") }}
+        {% for error in field.errors %}
+        <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+        
+    {% endfor %}
+
+        <button class="button-40">Submit</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

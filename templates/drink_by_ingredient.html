@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel='stylesheet' href="{{ url_for('static', filename='drink_by_ingredient.css') }}">
+<link rel='stylesheet' href="{{ url_for('static', filename='drink_search.css') }}">
+
+{% endblock %}
+
+{% block title %}
+<div class="mainTitle">Ingredient Results! {{ingredient}}</div>
+{% endblock %}
+
+{% block content %}
+<div class="ingResultsContainer">
+    {% for drink in drink %}
+    <div className="ingRow" id="myIngRow">
+        <img id='drinkImage' src="{{drink['strDrinkThumb']}}">
+        <div id="rowImage">
+            <a id='nameDrink' href="/get_drink_with_ingredient?drink={{ drink['strDrink'] }}">{{drink['strDrink']}}</a>
+        </div>
+
+    
+    </div>
+    <div className="spaceRow"></div>
+    {% endfor %}
+
+{% endblock %}

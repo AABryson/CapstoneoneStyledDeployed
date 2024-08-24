@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 100;
+}
+
+.mainTitle {
+    font-size: 6.5vw;
+    color: white !important;
+    letter-spacing: .8vmax;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 600;
+    filter: brightness(1.9);
+    margin-top: 3vmax;
+}
+/*changed**/
+.resultContainer {
+    display: flex;
+    flex-direction: column;
+    height: 150vmax;
+    /* backdrop-filter: blur(20px); */
+    /* width: 100%; */
+}
+
+/*changed**/
+
+.drinkResultContainer {
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+    /* background-color: rgba(54, 66, 77, .9); */
+    box-shadow: rgba(51, 69, 77, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    height: auto;
+    justify-content: space-around;
+}
+
+.leftPart {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+.drinkSearchImage {
+    height: 15vmax;
+    width: 100%;
+
+}
+/*changed **/
+.ingredientsBox {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 15vmax;
+    background-color: #a2631c;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    padding: .4vw;
+    height: 100%;
+
+}
+
+.ingredientsBackground {
+    background-color: #a2631c;
+    height: 100%;
+    width: 5vw;
+
+
+}
+.ingredientsTitle {
+    color: black;
+    font-family: 'open sans';
+    margin-top: 1vh;
+    font-size: 1.5vw;
+    font-weight: 600;
+    letter-spacing: .1vw;
+    padding: .4vw;
+}
+
+.ingredients {
+    font-family: 'open sans';
+    font-size: 1vw;
+    padding: .4vw;
+
+}
+
+.rightPart {
+    display: flex;
+    height: auto;
+    /* width: 80%; */
+    flex-direction: column;
+    align-items: start;
+    /* margin-left: 2vw; */
+    /* margin-right: .5vw; */
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding-left: 2%;
+}
+/*changed **/
+.drinkTitleBox {
+    display: flex;
+    border-bottom: 4px solid white;
+    width: 100%;
+    height: auto;
+    align-items: center
+
+}
+/*changed **/
+.drinkTitle {
+    font-size: 4vmax;
+    color: white;
+    width: 100%;
+    font-weight: bolder;
+    letter-spacing: .5vw;
+    font-family: "Poiret One", sans-serif;
+    line-height: 2;
+   
+}   
+
+.drinkGlass {
+    font-size: 2vmax;
+    color: silver;
+    font-weight: 200;
+    letter-spacing: .2vw;
+    font-family: "Cantarell", sans-serif;
+    height: 20%;
+    margin-top: 1vmax;
+
+}
+
+.directions {
+    color: white;
+    font-family: "Cantarell", sans-serif;
+    font-size: 1.8vmax;
+    font-weight: 200;
+    width: 100%;
+    height: auto;
+    padding-right: 2%;
+    padding-bottom: 1vmax;
+    
+
+}
+/*changed **/
+.reviewContainer {
+    display: flex;
+    flex-direction: column;
+    font-weight: 200;
+    width: 80%;
+    height: auto;
+    margin-right: 20vh;
+    margin-top: 10vmax;
+    justify-content: start;
+    background-color: rgba(226, 223, 222, .9);
+    padding:1vmax;
+}
+
+.reviews {
+    color: black;
+    font-size:2.5vmax;
+    font-family: "Cantarell", sans-serif;
+    font-weight: 200;
+}
+
+.reviewBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewTitle {
+    color: #353230;
+    font-size: 2vmax;
+    font-family: "Cantarell", sans-serif;
+}
+
+.reviewBody {
+    color:#353230;
+    font-size: 1.6vmax;
+    filter: brightness(1.5);
+    font-family: 'garamond'
+}
+

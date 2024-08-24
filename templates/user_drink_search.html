@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block extra_css %}
+<link rel='stylesheet' href="{{ url_for('static', filename='user_drink_search.css') }}">
+<link rel='stylesheet' href="{{ url_for('static', filename='drink_search.css') }}">
+
+{% endblock %}
+
+{% block title %}
+    {% if user %}
+    <div id='userDrinkTitle'>Here you go {{user.username}}!</div>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="resultContainer">
+    <div class="drinkResultContainer">
+        <div class="leftPart">
+            <img src="{{drink['strDrinkThumb']}}" class='drinkSearchImage'>
+            <div class="ingredientsBox">
+                <div class="ingredientsBackground">
+                    <h5 class="ingredientsTitle">Ingredients</h5>
+                    <p class="ingredients">
+                    {% for details in drink_details %}
+                    
+                        {% for item in details %}
+                        {{ item }}
+                    
+                        {% endfor %}
+                    
+                    {% endfor %}
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="rightPart">
+            
+                <div class="drinkTitleBox">
+                    <h1 class="drinkTitle">{{drink['strDrink']}}</h1>
+                        
+                </div> 
+                <h1 class="drinkGlass">Glass | {{drink['strGlass']}}</h1>
+                        
+                <h5 class="directions">Directions - {{drink['strInstructions']}}</h5>
+        </div>
+    </div>
+
+    <!-- <button class="btn btn-primary btn-lg btn-block"><a href="/review/{{user.id}}"></a>Write review</button> -->
+    <div class="reviewAndFavorites">
+        <div class="reviewButton">
+            <a href="/review/{{ user.id }}?drink={{drink['strDrink']}}" class="userbutton-5">Write review</a>
+        </div>
+        <div class="favoritesButton">
+            <form action="/add_favorite?userid={{user.id}}&drinkname={{drink['strDrink']}}" method="POST">
+                <button class="userbutton-5">Store in Favorites</button>
+            </form>
+        </div>
+        
+        <div id="returnButton">
+            {% if user %}
+            <form method="GET" action="/user_page/{{ user.id }}">
+                <button type="submit" class="userbutton-5">Return</button>
+            </form>
+            
+            {% endif %}
+            
+        </div>
+    </div>
+
+    <div class="userReviewContainer">
+        <div class="userReviews">Reviews
+        </div>
+
+        <div class="userReviewBox">
+            {% for review in reviews %}
+            <div class="userReviewTitle">{{ review.title }}</div>
+            <p class="userReviewBody">{{ review.review }}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}

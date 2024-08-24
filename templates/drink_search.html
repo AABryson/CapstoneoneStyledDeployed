@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block extra_css %}
+<link rel='stylesheet' href="{{ url_for('static', filename='drink_search.css') }}">
+{% endblock %}
+
+{% block title %}
+<div class="mainTitle">Enjoy!</div>
+{% endblock %}
+
+{% block content %}
+<!--changed-->
+<div class="resultContainer">
+    <div class="drinkResultContainer">
+        <div class="leftPart">
+            <img src="{{drink['strDrinkThumb']}}" class='drinkSearchImage'>
+            <div class="ingredientsBox">
+                <div class="ingredientsBackground">
+                    <h5 class="ingredientsTitle">Ingredients</h5>
+                    <p class="ingredients">
+                    {% for details in drink_details %}
+                    
+                        {% for item in details %}
+                        {{ item }}
+                    
+                        {% endfor %}
+                    
+                    {% endfor %}
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="rightPart">
+            
+                <div class="drinkTitleBox">
+                    <h1 class="drinkTitle">{{drink['strDrink']}}</h1>
+                        
+                </div> 
+                <h1 class="drinkGlass">Glass | {{drink['strGlass']}}</h1>
+                        
+                <h5 class="directions">Directions - {{drink['strInstructions']}}</h5>
+        </div>
+    </div>
+    <!--changed -->
+    {% if reviews %}
+    <div class="reviewContainer">
+        <div class="reviews">Reviews</div>
+        <div class="reviewBox">
+            {% for review in reviews %}
+            <div class="reviewTitle">{{ review.title }}</div>
+            <p class="reviewBody">{{ review.review }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+
+</div>
+
+
+<!-- <h1>{{drink_name}}</h1>
+<h2>{{glass}}</h2> -->
+{% endblock %}

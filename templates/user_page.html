@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel='stylesheet' href="{{ url_for('static', filename='user_page.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+{% endblock %}
+
+{% block title %}
+<div class="mainTitle">Welcome {{user.username}}!</div>
+{% endblock %}
+
+{% block content %}
+<div class="searchContainer">
+    <div class="formSection">
+        <div class="formText">
+            <form action="/user_get_drink/{{ user.id }}"method="POST">
+                <label for="drink">Search by name</label>
+        </div>
+        <div class="formInput">
+            <input type="text" class='input' name="drink" placeholder="Name of cocktail">
+        </div>
+        <div class="formButton">
+            <button type="submit" class="button-5">Search</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="formSection">
+        <div class="formText">
+            <form action="/user_use_ingredient/{{ user.id }}"method="POST">
+                <label for="ingredient">Search by ingredient</label>
+        </div>
+        <div class="formInput">
+            <input type="text" class="input" name="ingredient" placeholder="Name of ingredient">
+        </div>
+        <div class="formButton">
+            <button type="submit" class="button-5">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="formSection">
+        <div class="formText">
+            <form method='GET' action="/user_random_drink/{{ user.id }}">
+                <label for="drink">Search at random</label>
+        </div>
+        <div class="formButton">
+                <button type="submit" class="button-5">Search</button>
+            </form>
+        </div>
+    </div>
+    </div>
+        
+    
+<div id="reviewFavsContainer">
+    <div id="userReviewsContainer">
+        <div class="reviewSectionTitle">My Reviews
+        </div>
+        <div class="reviewRow">
+            {% for review in reviews %}
+            <h4 class="userDrinkName">{{review.drinkname}}</h4>
+            <h4 class="userReviewTitle">{{review.title}}</h4>
+            <p class="actualUserReview">{{ review.review}}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="middleSpace"></div>
+    <div class="userFavoritesContainer">
+        <div class="userFavoritesTitle">My Favorites</div>
+        
+            {% for f in favorites %}
+            <h4 id="userFavorite">{{ f.drinkname }}</h4>
+            {% endfor %}
+            <div class="editFavorites">
+                <form id='userpageForm' method="GET" action="/edit_user_favorites/{{ user.id }}">
+                    <button class='userbutton-6' type="submit">Edit</button>
+                </form>
+            </div>      
+    </div>
+
+{% endblock %}

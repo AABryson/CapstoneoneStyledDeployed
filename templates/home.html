@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block extra_css %}
+<link rel='stylesheet' href="{{ url_for('static', filename='home.css') }}">
+<link rel='stylesheet' href="{{ url_for('static', filename='drink_search.css') }}">
+
+{% endblock %}
+
+
+    {% block title %}
+    <div class="mainTitle">The Cocktail Encyclopedia</div>
+    {% endblock %}
+
+    {% block content %}
+    <div class="searchContainer">
+    <div class="formSection">
+        <div class="formText">
+            <form action="/get_drink" method="POST">
+                <label for="drink">Search by name</label>
+        </div>
+        <div class="formInput">
+            <input type="text" class='input' name="drink" placeholder="Name of cocktail">
+        </div>
+        <div class="formButton">
+            <button type="submit" class="button-5">Search</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="formSection">
+        <div class="formText">
+            <form action="/use_ingredient" method="POST">
+                <label for="ingredient">Search by ingredient</label>
+        </div>
+        <div class="formInput">
+            <input type="text" class="input" name="ingredient" placeholder="Name of ingredient">
+        </div>
+        <div class="formButton">
+            <button type="submit" class="button-5">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="formSection">
+        <div class="formText">
+            <form method='GET' action="/random_drink">
+                <label for="drink">Search at random</label>
+        </div>
+        <div class="formButton">
+                <button type="submit" class="button-5">Search</button>
+            </form>
+        </div>
+    </div>
+        
+    </div>
+
+
+
+
+
+
+{% endblock %}

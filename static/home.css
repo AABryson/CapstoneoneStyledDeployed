@@ -1,0 +1,114 @@
+
+.mainTitle {
+    font-size: 6vw; 
+    color: white !important;
+    letter-spacing: .8vmax;
+    font-family: "Poiret One", sans-serif;
+    font-weight: bolder;
+    filter: brightness(1.9);
+    margin-top: 3vmax;
+}
+.searchContainer {
+    display: flex !important;
+    flex-direction: column;
+    background-color: rgba(54, 66, 77, .9);
+    box-shadow: rgba(51, 69, 77, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    height: 23vmax;
+    justify-content: space-around;
+    /* backdrop-filter: blur(20px); */
+    /* width: 100%; */
+}
+
+.formSection {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: row;
+    height: 8vmax;
+    align-items: center; 
+    font-family: "Cantarell", sans-serif;
+    letter-spacing: 1.5px;
+    justify-content: start;
+    
+}
+
+.formText {
+    font-size: 2vw;
+    width: 20vmax;
+    margin: 0px;
+    color: white !important;
+    
+}
+
+
+.formInput {
+    /* margin-right: 30%; */
+    display: flex;
+    height: 3vh;
+    width: 20vmax;
+    margin: 0;
+    padding: 2px;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+}
+
+.formButton {
+    margin-left: 2vw;
+
+}
+
+
+.button-5 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #a2631c;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.3vw;
+  font-weight: 300;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  height: 2.5vmax;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 7vmax;
+}
+
+.button-5:hover,
+.button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+
+
+

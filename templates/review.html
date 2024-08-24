@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block extra_css %}
+<link rel='stylesheet' href="{{ url_for('static', filename='review.css') }}">
+{% endblock %}
+
+{% block title %}
+    <div id='reviewPageTitle'>Write a Review</div>
+{% endblock %}
+
+{% block content %}
+
+    <div id="reviewArea">
+        <div id="reviewTitle">{{ drink }}</div>
+        <div id="reviewFormArea">
+            <form id=form method="POST" action="/save_review/{{user_id}}?drink={{drink}}">
+            {{ form.hidden_tag() }}
+
+            {% for field in form if field.widget.input_type != 'hidden' %}
+                {{field.label}}
+                {{ field(class="reviewField") }}
+                {% for error in field.errors %}
+                <span class="text-danger">{{ error }}</span>
+                {% endfor %}
+
+            {% endfor %}
+        
+
+        <div id="buttonArea">
+            <button class="userbutton-7">Submit</button>
+            </form>
+        </div>
+        </div>
+        
+
+    </div>
+
+{% endblock %}

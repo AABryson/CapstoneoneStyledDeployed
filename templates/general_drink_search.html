@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel='stylesheet' href="{{ url_for('static', filename='general_drink_search.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<div class="generaldrinkSearchContainer">
+    <img class='generaldrinkImage' src="{{drink['strDrinkThumb']}}">
+    <table class="table table-striped">
+        <tbody>
+            
+            <tr>
+                <td>Drink Name:</td>
+                <td>{{drink['strDrink']}}</td>
+                
+            </tr>
+            <tr>
+                <td>Glass:</td>
+                <td>{{drink['strGlass']}}</td>
+                
+            </tr>
+            <tr>
+                <td>How to make:</td>
+                <td>{{drink['strInstructions']}}</td>
+            </tr>
+            <tr>
+                <td>Ingredients:</td>
+                <td>
+                {% for details in drink_details %}
+                
+                    {% for item in details %}
+                    {{ item }}
+                 
+                    {% endfor %} ,
+                
+                {% endfor %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- <h1>{{drink_name}}</h1>
+<h2>{{glass}}</h2> -->
+
+
+{% endblock %}

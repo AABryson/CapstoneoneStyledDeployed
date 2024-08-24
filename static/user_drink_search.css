@@ -1,0 +1,117 @@
+
+#userDrinkTitle {
+    font-size: 6vmax; 
+    color: white !important;
+    letter-spacing: .5vmax;
+    font-family: 'open sans';
+    font-weight: bolder;
+    filter: brightness(2);
+    margin-top: 2vh;
+}
+
+
+.reviewAndFavorites {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vmax;
+    margin-left: 10vmax;
+}
+
+.reviewButton {
+    margin-left: 5vmax;
+    text-align: center;
+    
+}
+
+.favoritesButton {
+    margin-left: 3vmax;
+}
+
+#returnButton {
+    margin-left: 3vmax;
+
+}
+
+.userbutton-5 {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #2c2b29;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1.3vmax;
+    font-weight: 300;
+    justify-content: center;
+    line-height: 1.2;
+    margin: 0;
+    height: 5vmax;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: 10vmax;
+}
+  
+.userbutton-5:hover,
+.userbutton-5:focus {
+    background-color: #64625e;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+  
+.userbutton-5:hover {
+    transform: translateY(-1px);
+}
+  
+.userbutton-5:active {
+    background-color: #64625e;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+  
+.userReviewContainer {
+    display: flex;
+    flex-direction: column;
+    font-weight: 200;
+    width: 80%;
+    height: 20vmax;
+    /* margin-right: 15vmax; */
+    margin-top: 10vmax;
+    justify-content: start;
+    background-color: rgba(226, 223, 222, .9);
+    padding:1vmax;
+}
+
+.userReviews {
+    color: black;
+    font-size:2.5vmax;
+    font-family: "Cantarell", sans-serif;
+    font-weight: 200;
+}
+
+.userReviewBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.userReviewTitle {
+    color: #353230;
+    font-size: 2vmax;
+    font-family: "Cantarell", sans-serif;
+}
+
+.userReviewBody {
+    color:#353230;
+    font-size: 1.6vmax;
+    filter: brightness(1.5);
+    font-family: 'garamond'
+}
+
