@@ -8,7 +8,7 @@ from forms import UserSignupForm, UserLoginForm, UserReviewForm
 CURR_USER_KEY = "curr_user"
 
 app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL", "postgresql://cocktailsdb_9nc2_user:w1NSq3sF3SqAByFGc4K0rJPxY9OaHBzm@dpg-cr57fdij1k6c7393jvo0-a.oregon-postgres.render.com/cocktailsdb_9nc2")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL", "postgresql://cocktailsdb_9nc2_user:w1NSq3sF3SqAByFGc4K0rJPxY9OaHBzm@dpg-cr57fdij1k6c7393jvo0-a/cocktailsdb_9nc2")
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL", "postgresql:///cocktails")
 # app.config['SQLALCHEMY_DATABASE_URI']='postgresql:///cocktails'
