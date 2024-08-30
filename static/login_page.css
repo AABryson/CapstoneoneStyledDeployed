@@ -55,6 +55,7 @@
     /* box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px; */
+    color: white;
     margin-bottom: 2vmax;
     font-size: 2vmax;
     background-color: rgba(55, 54, 54, 0.9) !important;
@@ -62,7 +63,7 @@
 }
 
 #username.loginInput::placeholder {
-    font-size: 20px /* Adjust the value to your desired size */
+    font-size: 20px 
   }
   
 
@@ -71,24 +72,13 @@
     height: 4vmax;
     padding-left: 1vmax;
     font-family: 'open sans';
-    /* box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px; */
+    color: white;
     margin-bottom: 2vmax;
     font-size: 2vmax;
     background-color: rgba(55, 54, 54, 0.9) !important;
 
 }
 
-/* #password.loginInput::placeholder {
-    font-size: 10vmax 
-  } */
-
-
-
-
-    
-    /* CSS */
 .button-40 {
     height: 4vmax;
     background-color: #111827;
